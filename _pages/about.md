@@ -26,7 +26,7 @@ Publications
 
 **[Computational Imaging using Ultrasonically-Sculpted Virtual Lenses](http://hbaktash.github.io/files/DeBlurUS_ICCP22.pdf)**\
 Hossein Baktash, Yash Belhe, Matteo Giuseppe Scopelliti, Yi Hua, Aswin C Sankaranarayanan, Maysamreza Chamanzar \
-**(ICCP 2022)**
+ICCP 2022
 
 
 \
