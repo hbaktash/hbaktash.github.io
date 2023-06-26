@@ -32,7 +32,7 @@ Hossein Baktash, Yash Belhe, Matteo Giuseppe Scopelliti, Yi Hua, Aswin C Sankara
 \
 <img align="left" width="100" height="100" src="../images/match_off.png" onmouseover="this.src='../images/match_on.png'" onmouseout="this.src='../images/match_off.png'">
 
-**(Some Results on Dominating Induced Matchings)[]**\
+**(Some Results on Dominating Induced Matchings)[https://arxiv.org/pdf/1912.00511]**\
 S Akbari, H Baktash, A Behjati, A Behmaram, M Roghani\
 Graphs and Combinatorics 38 (3), 73
 
