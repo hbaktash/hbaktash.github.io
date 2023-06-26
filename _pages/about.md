@@ -14,7 +14,7 @@ Previously, I graduated from [Sharif University of Technology](https://en.wikipe
 
 Research
 ====
-My research interest broadly is geometry processing and computer graphics. I find it rewarding to learn about Differential Geometry and Topology problems and to apply that knowledge to the discrete domain when possible.
+My research interest broadly is geometry processing and computer graphics. I find it rewarding to learn about Differential Geometry and Topology and to apply that knowledge to the discrete domain when possible.
 
 I used to do [Computational Imaging](https://en.wikipedia.org/wiki/Computational_imaging); where I got to learn some optics and acoustics and did some physical experiments. In my undergraduate years, I worked on some Graph Theory and Statistics problems.
 
