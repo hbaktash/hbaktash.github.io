@@ -14,7 +14,7 @@ Previously, I graduated from [Sharif University of Technology](https://en.wikipe
 
 Research
 ====
-My research interest broadly is geometry processing and computer graphics. I enjoy learning about [Differential Geometry](https://en.wikipedia.org/wiki/Differential_geometry) problems and applying that knowledge to the [discrete domain](https://en.wikipedia.org/wiki/Discrete_geometry) when possible.
+My research interest broadly is geometry processing and computer graphics. I find it rewarding to learn about [Differential Geometry](https://en.wikipedia.org/wiki/Differential_geometry) problems and to apply that knowledge to the [discrete domain](https://en.wikipedia.org/wiki/Discrete_geometry) when possible.
 
 I used to do [Computational Imaging](https://en.wikipedia.org/wiki/Computational_imaging); where I got to learn some optics and acoustics and did some physical experiments. In my undergraduate years, I worked on some Graph Theory and Statistics problems.
 
@@ -24,16 +24,15 @@ Publications
 
 <img align="left" width="100" height="100" src="../images/deblur_off.png" onmouseover="this.src='../images/deblur_on.png'" onmouseout="this.src='../images/deblur_off.png'">
 
-**Computational Imaging using Ultrasonically-Sculpted Virtual Lenses**\
+**[Computational Imaging using Ultrasonically-Sculpted Virtual Lenses](http://hbaktash.github.io/files/DeBlurUS_ICCP22.pdf)**\
 Hossein Baktash, Yash Belhe, Matteo Giuseppe Scopelliti, Yi Hua, Aswin C Sankaranarayanan, Maysamreza Chamanzar \
-**(ICCP 2022)** \
-[\[pdf\]](http://hbaktash.github.io/files/DeBlurUS_ICCP22.pdf)
+**(ICCP 2022)**
 
 
 \
-<img align="left" width="100" height="100" src="../images/match_off.png" onmouseover="this.src='../images/match_on.png'" onmouseout="this.src='../images/deblur_off.png'">
+<img align="left" width="100" height="100" src="../images/match_off.png" onmouseover="this.src='../images/match_on.png'" onmouseout="this.src='../images/match_off.png'">
 
-**Some Results on Dominating Induced Matchings**\
+**(Some Results on Dominating Induced Matchings)[]**\
 S Akbari, H Baktash, A Behjati, A Behmaram, M Roghani\
 Graphs and Combinatorics 38 (3), 73
 
