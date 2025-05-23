@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a second year [ECE](https://www.ece.cmu.edu/index.html) Ph.D. student at [Carnegie Mellon University](https://en.wikipedia.org/wiki/Carnegie_Mellon_University). I've been very fortunate to be a part of [the Geometry Collective](http://geometry.cs.cmu.edu/) and to be advised by [Keenan Crane](https://www.cs.cmu.edu/~kmcrane/). In summer 2023, I interned at [Adobe](https://www.adobe.com/), where I had the pleasure of working with [Alec Jacobson](https://www.cs.toronto.edu/~jacobson/) and [Qingnan Zhou](https://research.adobe.com/person/qingnan-zhou/) on physics-related problems.
+I am a fourth year [ECE](https://www.ece.cmu.edu/index.html) Ph.D. student at [Carnegie Mellon University](https://en.wikipedia.org/wiki/Carnegie_Mellon_University). I've been very fortunate to be a part of [the Geometry Collective](http://geometry.cs.cmu.edu/) and to be advised by [Keenan Crane](https://www.cs.cmu.edu/~kmcrane/). In summer 2023 and 2024, I interned at [Adobe](https://www.adobe.com/), where I had the pleasure of working with [Alec Jacobson](https://www.cs.toronto.edu/~jacobson/) and [Qingnan Zhou](https://research.adobe.com/person/qingnan-zhou/) on physics-related problems.
   
 Previously, I graduated from [Sharif University of Technology](https://en.wikipedia.org/wiki/Sharif_University_of_Technology) with a B.S. in Computer Engineering and a minor in Mathematics. A copy of my CV can be found [here](https://hbaktash.github.io/files/CV%20Hossein_Baktash.pdf).
 
@@ -22,6 +22,14 @@ Before doing geometry, I used to do [Computational Imaging](https://en.wikipedia
 Publications
 =====
 
+<img align="left" width="100" height="100" src="../images/Dice_only.png" onmouseover="this.src='../images/Dice_2d6.png'" onmouseout="this.src='../images/Dice_only.png'">
+
+**[Putting Rigid Bodies to Rest](http://hbaktash.github.io/files/rolling_dragons_paper.pdf)**\
+Hossein Baktash, Nicholas Sharp, Qingnan Zhou, Keenan Crane, Alec Jacobson \
+ACM Trans. on Graph. (2025)
+
+
+\
 <img align="left" width="100" height="100" src="../images/deblur_off.png" onmouseover="this.src='../images/deblur_on.png'" onmouseout="this.src='../images/deblur_off.png'">
 
 **[Computational Imaging using Ultrasonically-Sculpted Virtual Lenses](http://hbaktash.github.io/files/DeBlurUS_ICCP22.pdf)**\
