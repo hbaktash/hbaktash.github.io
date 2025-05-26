@@ -26,7 +26,8 @@ Publications
 
 **[Putting Rigid Bodies to Rest](http://hbaktash.github.io/files/rolling_dragons_paper.pdf)**\
 Hossein Baktash, Nicholas Sharp, Qingnan Zhou, Keenan Crane, Alec Jacobson \
-ACM Trans. on Graph. (2025)
+ACM Trans. on Graph. (2025) \
+[Dice rolling video](https://www.youtube.com/watch?v=xNm-nNt7lu8), [Supplementary files](http://hbaktash.github.io/files/RigidBodies_supp_files.zip)
 
 
 \
