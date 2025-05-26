@@ -10,3 +10,4 @@ citation: 'Baktash, Sharp, Zhou, Crane, Jacobson. SIGGRAPH, ACM TOG, 2025.'
 ---
 
 [Download paper here](http://hbaktash.github.io/files/rolling_dragons_paper.pdf)
+[Supplementary files here](http://hbaktash.github.io/files/RigidBodies_supp_files.zip)
