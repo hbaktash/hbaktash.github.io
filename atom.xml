@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Aria Halavati</title>
+ <title>Hossein Baktash</title>
  <link href="https://hbaktash.github.io/atom.xml" rel="self"/>
  <link href="https://hbaktash.github.io"/>
  <updated>2024-08-15T00:32:52-04:00</updated>
  <id>https://hbaktash.github.io</id>
  <author>
-   <name>Aria Halavati</name>
-   <email>aria.halavati@cims.nyu.edu</email>
+   <name>Hossein Baktash</name>
+   <email>hbaktash@andrew.cmu.edu</email>
  </author>
 
  
