@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Putting Rigid Bodies to Rest – Hossein Baktash</title>
+
+  <!-- fonts & icons -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700"
+        type="text/css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css" type="text/css">
+
+  <!-- site‑wide styles -->
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+
+  <!-- favicons (optional) -->
+  <link rel="icon" type="image/png" sizes="192x192" href="../../favicon.png">
+</head>
+
+<body>
+  <!-- ─────────────── NAVIGATION (same as root) ─────────────── -->
+  <nav class="nav-main">
+    <ul>
+      <!-- <li class="logo"><a class="hvr-ripple-out" href="./">H</a></li> -->
+      <li class="hvr-underline-reveal"><a href="../../index.html">About</a></li>
+      <li class="hvr-underline-reveal"><a target=”_blank” href="../../files/CV%20Hossein_Baktash.pdf">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─────────────── PAGE CONTENT ─────────────── -->
+  <div class="container content">
+    <main>
+      <div class="page">
+
+        <header>
+          <h1 class="landing-title">Putting&nbsp;Rigid&nbsp;Bodies&nbsp;to&nbsp;Rest</h1>
+
+          <p style="text-align: center;">
+            <em>ACM Transactions on Graphics&nbsp;(SIGGRAPH 2025)</em>
+          </p>
+          <p class="authors" style="text-align: center;">
+            <strong>Hossein Baktash</strong>,
+            <a href="https://nmwsharp.com/">Nicholas Sharp</a>,
+            <a href="https://research.adobe.com/person/qingnan-zhou/">Qingnan Zhou</a>,
+            <a href="https://www.cs.cmu.edu/~kmcrane/">Keenan Crane</a>,
+            <a href="https://www.cs.toronto.edu/~jacobson/">Alec Jacobson</a><br>
+          </p>
+        </header>
+
+        <!-- Teaser image -->
+
+        <!-- Links row -->
+        <!-- <p class="text-center" style="margin-top:1.5em">
+          <a class="button" href="https://hbaktash.github.io/files/rolling_dragons_paper.pdf">
+            <i class="fa fa-file-pdf-o"></i> Paper&nbsp;(PDF)
+          </a>
+          <a class="button" href="https://hbaktash.github.io/files/RigidBodies_supp_files.zip">
+            <i class="fa fa-file-zip-o"></i> Supplemental&nbsp;Files
+          </a> -->
+          <!-- Uncomment if code is public
+          <a class="button" href="https://github.com/USERNAME/rigid-bodies-rest">
+            <i class="fa fa-github"></i> Code
+          </a> -->
+          <!-- <a class="button" href="#bibtex">
+            <i class="fa fa-book"></i> BibTeX
+          </a>
+          <a class="button" href="https://www.youtube.com/watch?v=xNm-nNt7lu8">
+            <i class="fa fa-video-camera"></i> Video
+          </a>
+        </p> -->
+
+        <!-- Abstract -->
+        <figure style="text-align:center">
+          <img src="../../files/images/DicePhoto_s2.jpg" alt="Paper teaser" style="width:150%">
+          <!-- <figcaption> Teaser Image </figcaption> -->
+        </figure>
+        <h2 id="abstract">Abstract</h2>
+        <p>
+          <em>This paper explores the analysis and design of the resting configurations of a rigid body, without the use of physical simulation. In particular, given a rigid body in R^3, we identify all possible stationary points, as well as the probability that the body will stop at these points, assuming a random initial orientation and negligible momentum. The forward version of our method can hence be used to automatically orient models, to provide feedback about object stability during the design process, and to furnish plausible distributions of shape orientation for natural scene modeling. Moreover, a differentiable inverse version of our method lets us design shapes with target resting behavior, such as dice with target, nonuniform probabilities. Here we find solutions that would be nearly difficult to find using classical techniques, such as dice with additional unstable faces that provide more natural overall geometry. From a technical point of view, our key observation is that rolling equilibria can be extracted from the Morse-Smale complex of the support function over the Gauss map. Our method is hence purely geometric, and does not make use of random sampling, or numerical time integration. Yet surprisingly, this purely geometric model makes extremely accurate predictions of rest behavior, which we validate both numerically, and via physical experiments. Moreover, for computing rest statistics, it is orders of magnitude faster than state of the art rigid body simulation, opening the door to inverse design---rather than just forward analysis.</em>
+          <br><br>
+        </p>
+        <div class="material-grid">
+          <a class="material-card" href="https://hbaktash.github.io/files/rolling_dragons_paper.pdf" target="_blank" rel="noopener">
+            <i class="fa fa-file-pdf-o"></i>
+            <h3>Paper</h3>
+            <div class="sub">PDF (78&nbsp;MB)</div>
+          </a>
+          <a class="material-card" href="https://hbaktash.github.io/files/Dice_stl_files.zip" target="_blank" rel="noopener">
+            <i class="fa fa-file-zip-o"></i>
+            <h3>Dice STL Files</h3>
+            <div class="sub">STL files for 3D printing</div>
+          </a>
+          <a class="material-card" href="https://hbaktash.github.io/files/RigidBodies_supp_files.zip" target="_blank" rel="noopener">
+            <i class="fa fa-file-zip-o"></i>
+            <h3>Supplementary</h3>
+            <!-- <div class="sub">Supp files</div> -->
+          </a>
+        </div>
+        <!-- ─────────────── END MATERIALS GRID ─────────────── -->
+        <!-- Video placeholder -->
+        <h2 id="video">Dice Rolling Experiments Video</h2>
+        <!-- responsive 16:9 wrapper -->
+
+        <div class="video-wrapper">
+          <!-- replace ID with your own YouTube video ID -->
+          <iframe
+            src="https://www.youtube.com/embed/xNm-nNt7lu8?rel=0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Results / Gallery section -->
+        <!-- <h2 id="results">Results</h2>
+        <p>Below are a few example frames; swap each <code>img_TODO.jpg</code> with your own renders.</p>
+
+        <div class="gallery">
+          <img src="img_TODO1.jpg" alt="Result 1">
+          <img src="img_TODO2.jpg" alt="Result 2">
+          <img src="img_TODO3.jpg" alt="Result 3">
+        </div> -->
+
+        <!-- Citation -->
+        <!-- <h2 id="bibtex">BibTeX</h2>
+        <div class="material-card bibtex-card">
+          <pre class="bibtex-pre">
+@article{Baktash2025RigidBodies,
+  title   = {Putting Rigid Bodies to Rest},
+  author  = {Baktash, Hossein and Sharp, Nicholas and
+            Zhou, Qingnan and Crane, Keenan and Jacobson, Alec},
+  journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH)},
+  volume  = {44},
+  number  = {4},
+  year    = {2025},
+  articleno = {###},        % update once assigned
+  doi     = {10.1145/XXXXXXXXXX}
+}</pre>
+        </div> -->
+        <!-- Acknowledgments (optional) -->
+        <h2 id="acknowledgments">Acknowledgments</h2>
+        <p>
+          This work was generously supported by NSF awards 2212290, 1943123, NSERC Discovery (RGPIN–2022–04680), the Ontario Early Research Award program, the Canada Research Chairs Program, a Sloan Research Fellowship, the DSI Catalyst Grant program and gifts from Adobe Systems. The authors also thank Joseph Sharp for resin printing the dice, Zo<span>&#235;</span> Marschner and Olga Guțan for helping with conducting and recording the dice experiments, and Carnegie Mellon University TechSpark 3D printing facilities for enabling and helping with dice fabrication.
+        </p>
+
+        <!-- Footer nav back to top or to papers list -->
+        <p class="text-center" style="margin-top:3em">
+          <a href="../../papers.html">&larr; Back to papers</a>
+        </p>
+
+      </div><!-- /.page -->
+    </main>
+  </div><!-- /.container -->
+</body>
+</html>

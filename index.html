@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Hossein Baktash</title>
+
+  <!-- fonts & icons -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700"
+        type="text/css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
+
+  <!-- site‑wide styles (same sheet your friend uses) -->
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+  <!-- favicons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon.png">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./apple-touch-icon.png">
+
+  <!-- optional feed -->
+  <link rel="alternate" type="application/atom+xml" title="Hossein Baktash" href="./atom.xml">
+</head>
+
+<body>
+  <!-- ─────────────── NAVIGATION ─────────────── -->
+  <nav class="nav-main">
+    <ul>
+      <!-- <li class="logo"><a class="hvr-ripple-out" href="./">H</a></li> -->
+      <li class="hvr-underline-reveal"><a href="./index.html">About</a></li>
+      <li class="hvr-underline-reveal"><a target=”_blank” href="./files/CV%20Hossein_Baktash.pdf">CV</a></li>
+    </ul>
+  </nav>
+  <!-- ─────────────── MAIN CONTENT ─────────────── -->
+  <div class="container content">
+    <main>
+      <div class="page">
+
+        <!-- page header -->
+        <header>
+          <h1 class="landing-title">Hossein Baktash</h1>
+        </header>
+
+        <!-- ─────────────── ABOUT – two‑column layout ─────────────── -->
+        <div class="about-flex">
+          <!-- left column : image + social links -->
+          <div class="about-img">
+            <img src="profile.jpg" alt="Hossein Baktash">
+            <div class="social-icons">
+              <a href="https://scholar.google.com/citations?user=upYcnQsAAAAJ&hl=en"
+                title="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
+              <!-- <a href="http://arxiv.org/a/halavati_a_1" title="arXiv"><i class="fa fa-file-text-o"></i></a> -->
+              <a href="https://github.com/hbaktash" title="GitHub"><i class="fa fa-github"></i></a>
+              <!-- <a href="https://orcid.org/0000-0001-8571-6363" title="ORCID"><i class="fa fa-id-badge"></i></a> -->
+              <!-- add/remove icons as you like -->
+            </div>
+          </div>
+
+          <!-- right column : about paragraphs -->
+          <div class="about-text">
+            <p>
+              I am a fourth‑year
+              <a href="https://www.ece.cmu.edu/index.html">ECE</a> Ph.D. student at
+              <a href="https://en.wikipedia.org/wiki/Carnegie_Mellon_University">Carnegie Mellon University</a>.
+              I've been fortunate to be a part of
+              <a href="http://geometry.cs.cmu.edu/">the Geometry Collective</a> and to be advised by
+              <a href="https://www.cs.cmu.edu/~kmcrane/">Keenan Crane</a>.
+              In summer 2023 and 2024, I interned at
+              <a href="https://www.adobe.com/">Adobe</a>, working with
+              <a href="https://www.cs.toronto.edu/~jacobson/">Alec Jacobson</a> and
+              <a href="https://research.adobe.com/person/qingnan-zhou/">Qingnan Zhou</a> on physics‑related problems.
+            </p>
+
+            <p>
+              Previously, I graduated from
+              <a href="https://en.wikipedia.org/wiki/Sharif_University_of_Technology">Sharif University of Technology</a>
+              with a B.S. in Computer Engineering and a minor in Mathematics.
+              A copy of my CV can be found
+              <a href="./files/CV%20Hossein_Baktash.pdf">here</a>.
+            </p>
+          </div>
+        </div>
+        <!-- ─────────────── END ABOUT ─────────────── -->
+<!-- /.text-center -->
+
+        <!-- ─────────────── RESEARCH ─────────────── -->
+        <h2 id="research">Research</h2>
+        <p>
+          My research interest broadly is geometry processing and computer graphics.
+          I find it rewarding to learn about Differential Geometry and Topology
+          and to apply that knowledge to the discrete domain when possible.
+        </p>
+        <p>
+          Before doing geometry, I worked on
+          <a href="https://en.wikipedia.org/wiki/Computational_imaging">Computational Imaging</a>,
+          where I learned some optics and acoustics and performed physical experiments.
+          In my undergraduate years, I also explored Graph Theory and Statistics.
+        </p>
+
+        <!-- ─────────────── PUBLICATIONS ─────────────── -->
+        <h2 id="publications">Publications</h2>
+
+        <div class="publication">
+          <img align="left" width="110" height="120"
+               src="./files/images/Dice_only.png"
+               onmouseover="this.src='./files/images/Dice_2d6.png'"
+               onmouseout="this.src='./files/images/Dice_only.png'" alt="Rigid‑body dice"
+               style="margin:0 1rem .4rem 0;">
+
+          <strong><a href="./files/rolling_dragons_paper.pdf">
+            Putting Rigid Bodies to Rest</a></strong><br>
+          Hossein Baktash, Nicholas Sharp, Qingnan Zhou, Keenan Crane, Alec Jacobson<br>
+          <em>ACM Trans. Graph.</em> (2025)<br>
+          <a href="https://www.youtube.com/watch?v=xNm-nNt7lu8">Dice rolling video</a> | 
+          <a href="https://hbaktash.github.io/files/RigidBodies_supp_files.zip">Supplementary files</a> | 
+          <a href="./projects/putting-rigid-bodies-to-rest/index.html">Project page</a>
+          <div style="clear:both;"></div>
+        </div>
+        <!-- add new empty lines -->
+         <p>  </p>
+        <div class="publication">
+          <img align="left" width="110" height="120"
+               src="./files/images/deblur_off.png"
+               onmouseover="this.src='./files/images/deblur_on.png'"
+               onmouseout="this.src='./files/images/deblur_off.png'" alt="Ultrasound deblurring"
+               style="margin:0 1rem .4rem 0;">
+
+          <strong><a href="./files/DeBlurUS_ICCP22.pdf">
+            Computational Imaging using Ultrasonically‑Sculpted Virtual Lenses</a></strong><br>
+          Hossein Baktash, Yash Belhe, Matteo Giuseppe Scopelliti, Yi Hua,
+          Aswin C. Sankaranarayanan, Maysamreza Chamanzar<br>
+          <em>ICCP 2022</em>
+          <div style="clear:both;"></div>
+        </div>
+        <p>  </p>
+        <div class="publication">
+          <img align="left" width="110" height="110"
+               src="./files/images/match_off.png"
+               onmouseover="this.src='./files/images/match_on.png'"
+               onmouseout="this.src='./files/images/match_off.png'" alt="Graph matching"
+               style="margin:0 1rem .4rem 0;">
+
+          <strong><a href="https://arxiv.org/pdf/1912.00511">
+            Some Results on Dominating Induced Matchings</a></strong><br>
+          S. Akbari, H. Baktash, A. Behjati, A. Behmaram, M. Roghani<br>
+          <em>Graphs and Combinatorics</em> 38 (3), 73
+          <div style="clear:both;"></div>
+        </div>
+
+        <!-- ─────────────── MISC ─────────────── -->
+        <h2 id="misc">Misc</h2>
+        <p>
+          I've been a member of the CMU
+          <a href="https://en.wikipedia.org/wiki/Pool_(cue_sports)">pool</a> team and club.
+          Back in Iran, I was lucky to be part of
+          <a href="https://www.instagram.com/hamnavard.sharif/">Sharif University's Mountaineering Club</a> family.
+        </p>
+
+      </div> <!-- /.page -->
+    </main>
+  </div> <!-- /.container -->
+
+</body>
+</html>
