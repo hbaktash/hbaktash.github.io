@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Subgrid Marching Tetrahedra – Hossein Baktash</title>
+
+  <!-- fonts & icons -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700"
+        type="text/css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css" type="text/css">
+
+  <!-- site‑wide styles -->
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+</head>
+
+<body>
+  <!-- ─────────────── NAVIGATION ─────────────── -->
+  <nav class="nav-main">
+    <ul>
+      <li class="hvr-underline-reveal"><a href="../../index.html">About</a></li>
+      <li class="hvr-underline-reveal"><a target="_blank" href="../../files/CV%20Hossein_Baktash.pdf">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─────────────── PAGE CONTENT ─────────────── -->
+  <div class="container content">
+    <main>
+      <div class="page">
+
+        <header>
+          <h1 class="landing-title">Subgrid&nbsp;Marching&nbsp;Tetrahedra</h1>
+
+          <p style="text-align: center;">
+            <em>ACM Transactions on Graphics&nbsp;(SIGGRAPH 2026)</em>
+          </p>
+          <p class="authors" style="text-align: center;">
+            <strong>Hossein Baktash</strong>,
+            <a href="https://markjgillespie.com/">Mark Gillespie</a>,
+            <a href="https://www.cs.cmu.edu/~kmcrane/">Keenan Crane</a>
+          </p>
+        </header>
+
+        <!-- Teaser image -->
+        <figure style="text-align:center; margin: 1.5em 0;">
+          <img src="../../files/images/CellTeaser-compressed.png" alt="Subgrid Marching Tetrahedra teaser" style="width:100%; max-width:800px;">
+        </figure>
+
+        <!-- Materials grid -->
+        <div class="material-grid">
+          <a class="material-card" href="../../files/SubgridTets.pdf" target="_blank" rel="noopener">
+            <i class="fa fa-file-pdf-o"></i>
+            <h3>Paper</h3>
+            <div class="sub">PDF (25&nbsp;MB)</div>
+          </a>
+          <a class="material-card" href="../../files/SubgridSupplement.pdf" target="_blank" rel="noopener">
+            <i class="fa fa-file-pdf-o"></i>
+            <h3>Supplementary</h3>
+            <div class="sub">PDF</div>
+          </a>
+          <a class="material-card" href="./demo.html" target="_blank" rel="noopener">
+            <i class="fa fa-play-circle"></i>
+            <h3>Interactive Demo</h3>
+            <!-- <h6>(standalone html code)</h6> -->
+            <div class="sub">Try it in your browser</div>
+          </a>
+        </div>
+
+        <!-- Abstract -->
+        <h2 id="abstract">Abstract</h2>
+        <p>
+          <em>We describe a method for recovering a manifold, intersection-free triangle
+              mesh from the points where edges of a tetrahedral grid pierce a continuous
+              surface. Unlike classic marching cubes or tets, our subgrid marching scheme
+              allows arbitrarily many surface patches within a single cell, capturing fine
+              features and thin sheets. Moreover, it requires neither a well-defined in-
+              side/outside (allowing surfaces with boundary), nor consistently-oriented
+              input geometry. Yet we retain the local, parallel nature of classic marching:
+              reconstruction is performed independently per tet, yielding a conforming
+              mesh across tet boundaries. Our key innovation is a generalization of normal
+              coordinates from geometric topology, which encode surface connectivity via
+              arbitrary integer intersection counts along each grid edge. This encoding
+              sidesteps the usual Nyquist–Shannon limit, putting no lower bound on the
+              size of features that can be resolved on a fixed grid. In practice, for similar
+              compute time and equal grid resolution—or even an equal number of output
+              triangles—meshes produced by subgrid marching are far more accurate than
+              those from classic marching. Beyond standard contouring, our method can
+              be used to convert polygon soup into a manifold, intersection-free mesh.</em>
+        </p>
+
+        <!-- Citation -->
+        <h2 id="bibtex">BibTeX</h2>
+        <div class="material-card bibtex-card">
+          <pre class="bibtex-pre">
+@article{Baktash:2026:SMT,
+  author    = {Baktash, Hossein and Gillespie, Mark and Crane, Keenan},
+  title     = {Subgrid Marching Tetrahedra},
+  journal   = {ACM Trans. Graph.},
+  issue_date = {July 2026},
+  volume    = {45},
+  number    = {4},
+  articleno = {57},
+  numpages  = {20},
+  year      = {2026},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  doi       = {10.1145/3811358},
+  url       = {https://doi.org/10.1145/3811358}
+}</pre>
+        </div>
+
+      </div><!-- /.page -->
+    </main>
+  </div><!-- /.container -->
+</body>
+</html>
