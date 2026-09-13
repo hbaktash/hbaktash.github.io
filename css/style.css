@@ -103,3 +103,59 @@
 @media (max-width: 640px) {
     .about-img { flex: 1 1 100%; }   /* image on top for phones */
 }
+/* ───────────────────────────────────────────────────────────────
+   Explainer figures — for project pages with a written walkthrough.
+   Wrap the section in <div class="explainer"> to opt in.
+   ─────────────────────────────────────────────────────────────── */
+/* Figure with a caption, centered. The figure's max-width sets the size of
+   both the image and its caption; pick one of the size classes below. */
+.explainer figure {
+  margin: 2em auto;
+  text-align: center;
+  max-width: 720px;          /* default */
+}
+.explainer figure img {
+  width: 100%;
+  height: auto;
+}
+.explainer figure.wide   { max-width: 100%; }   /* full column width */
+.explainer figure.medium { max-width: 560px; }
+.explainer figure.narrow { max-width: 420px; }
+/* Figure beside a paragraph: text wraps around it. Put the <figure> in the
+   source BEFORE the paragraph it should sit next to. Add "left" to flip it. */
+.explainer figure.side {
+  float: right;
+  max-width: 320px;
+  margin: .3em 0 1em 1.6em;
+}
+.explainer figure.side.left {
+  float: left;
+  margin: .3em 1.6em 1em 0;
+}
+/* Headings never sit next to a floated figure. */
+.explainer h2, .explainer h3 { clear: both; }
+/* Below this width a floated figure is cramped, so stack it instead. */
+@media (max-width: 680px) {
+  .explainer figure.side,
+  .explainer figure.side.left {
+    float: none;
+    max-width: 100%;
+    margin: 2em auto;
+  }
+}
+.explainer figcaption {
+  margin-top: .6em;
+  font-size: .9em;
+  line-height: 1.45;
+  color: #666;
+  text-align: left;
+}
+/* Two (or more) images side by side; they wrap on narrow screens. */
+.fig-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: flex-end;
+}
+.fig-row img { flex: 1 1 280px; max-width: 100%; }

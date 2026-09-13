@@ -14,6 +14,7 @@
 
   <!-- site‑wide styles -->
   <link rel="stylesheet" href="../../css/style.css" type="text/css">
+
 </head>
 
 <body>
@@ -60,6 +61,11 @@
             <h3>Supplementary</h3>
             <div class="sub">PDF</div>
           </a>
+          <a class="material-card" href="https://www.youtube.com/playlist?list=PLYoOFD5Utwx4" target="_blank" rel="noopener">
+            <i class="fa fa-youtube-play"></i>
+            <h3>Recordings</h3>
+            <div class="sub">Talk &amp; teaser (YouTube)</div>
+          </a>
           <a class="material-card" href="./demo.html" target="_blank" rel="noopener">
             <i class="fa fa-play-circle"></i>
             <h3>Interactive Demo</h3>
@@ -95,6 +101,82 @@
               be used to convert polygon soup into a manifold, intersection-free mesh.</em>
         </p>
 
+        <div class="explainer">
+
+        <h2 id="overview">How it works</h2>
+
+        <p>
+          <em>We generalize the well-known marching tetrahedra algorithm to produce meshes with details finer than the grid resolution.</em>
+          The classical marching cubes/tets algorithm takes scalar function values at the vertices of a tetrahedral grid, and produces a triangle mesh that approximates the zero level set of that function. 
+          The big limiting assumption is that each edge of the tet/cube can intersect the output surface <b>at most</b> once, and each tet/cube can produce at most one patch (single quad/triangle). So any features smaller than a single tet/cube are lost. 
+        </p>
+
+        <figure class="wide">
+          <img src="./smt_images/classical_marching_pipeline.png" alt="A 2D illustration of the classical marching pipeline">
+          <figcaption>
+            <strong>Figure 1.</strong> <em>Classical marching can easily miss features thinner than the grid size.</em>
+          </figcaption>
+        </figure>
+        <!-- Floated figure: must come BEFORE the paragraph it sits beside. -->
+        <figure class="side">
+          <img src="./smt_images/wineglass.png" alt="A wine glass reconstructed by subgrid marching, with a stem thinner than one grid cell">
+        </figure>
+
+        <p>
+          The usual solution in classical marching is to refine the grid, but the thinner a feature is, the more refinement we need.
+          Our method, unlike the classical approach, takes an arbitrary number of intersections on each edge, and builds a mesh out of them, no matter how close the intersections are to each other.
+          So capturing thin features, no matter how thin they are, is now possible without refining the grid.
+        </p>
+        <figure class="wide">
+          <img src="./smt_images/subgrid_pipeline.png" alt="A 2D illustration of the subgrid marching pipeline">
+        </figure>
+        
+        <h3 id="how">How do we connect the intersection points?</h3>
+
+        <figure class="side">
+          <img src="./smt_images/3D_local_construct.png" alt="Connecting points into a mesh inside a single tetrahedron">
+        </figure>
+        <p>
+          Given just a bunch of intersection points on the edges of a tetrahedron, it's not immediately clear how to connect them into a valid mesh. We use a prior for connectivity, which we call the normality prior. This is inspired by normal surface theory, which encodes a surface's topology via integer intersection counts along each grid edge. The 2D version of this problem has already found its way to a lot of cool problems in graphics &mdash; see
+          <a href="https://markjgillespie.com" target="_blank" rel="noopener">Mark Gillespie</a>'s and
+          <a href="https://nmwsharp.com" target="_blank" rel="noopener">Nick Sharp</a>'s theses and papers on intrinsic triangulations.
+        </p>
+
+        <p>
+          Our 3D construction uses the 2D approach as a foundation. We also go beyond normal surfaces and identify all classes of surfaces enumerated by the intersection counts. We provide a construction for each class, and provide a manifold and intersection-free guarantee for our output. Play around with all the different types in our <a href="./demo.html">interactive demo</a>!
+        </p>
+        <figure class="wide">
+          <img src="./smt_images/taxonomy.png" alt="A taxonomy of all surface classes produced inside a single tetrahedron">
+          <figcaption>
+            <strong>Figure 2.</strong> <em>All classes of surfaces we produce inside a single tetrahedron; restricted and simple surfaces on the left, more general and complex surfaces on the right. All identified by their intersection counts.</em>
+          </figcaption>
+        </figure>
+
+        <h3 id="why-use">What are the benefits of subgrid marching?</h3>
+        <p>
+          Subgrid marching enjoys all the same benefits of classical marching: the construction is local, efficient, and embarrassingly parallel, while guaranteeing global manifold and intersection-free properties.
+        </p>
+        <p>
+          Beyond recovering thin features, our method also provides a natural simplification of the output mesh. For almost any example, it gets better reconstruction quality than classical marching at a lower resolution, while producing far fewer output triangles.
+        </p>
+        <figure class="medium">
+          <img src="./smt_images/castle_example.png" alt="A castle model reconstructed by subgrid marching on a coarse grid beside classical marching on a much finer grid">
+          <figcaption>
+            <strong>Figure 3.</strong> <em>Our method in a 180<sup>3</sup> grid vs classical marching in a 500<sup>3</sup> grid.</em>
+          </figcaption>
+        </figure>
+
+        <h3 id="future-work">Future directions</h3>
+        <p>
+          In the paper, we only work with triangle soups and analytical SDFs, but our method can be applied to any input, as long as you can do ray-intersection queries on that input. If there is some representation out there that allows you to do ray-intersection queries, try subgrid marching on it!
+          Turning a triangle soup into a manifold mesh is a good example of this. The usual approach is to extract an SDF or generalized winding number and convert that into a mesh using classical marching. But that is not necessary anymore -- ray-intersection queries are much easier and cheaper and subgrid marching can work with them.
+        </p>
+        <p>
+          Subgrid marching, just like classical marching, makes the assumption that the surface is locally flat inside each tetrahedron; this is what we call the normality prior. And just like classical marching, this assumption becomes true as the grid is refined. We simply get to the correct topology faster &mdash; at a lower resolution. It could be possible to use other priors, or use more information about the input, to get the correct topology at an even lower resolution.
+        </p>
+       
+        </div><!-- /.explainer -->
+
         <!-- Citation -->
         <h2 id="bibtex">BibTeX</h2>
         <div class="material-card bibtex-card">
@@ -119,7 +201,7 @@
         <p>
           This work was funded by the National Science Foundation under awards 2212290 and 2504890.
           The authors wish to thank Dave Bachman, Saul Schleimer, and Eric Sedgwick for helpful conversations.
-          The soap film image in Figure 5 was generated by Nano Banana Pro [Google 2025], conditioned on a render of a discrete minimal surface.
+          The soap film image in Figure 5 of the paper was generated by Nano Banana Pro [Google 2025], conditioned on a render of a discrete minimal surface.
           The marble track model in Figure 18 is designed by Tulio Laanen, and the vase model in Figure 28 by Hiroaki Nishimura.
         </p>
       </div><!-- /.page -->
